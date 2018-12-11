@@ -163,5 +163,75 @@ sudo service supervisor restart
 #### 启动我们的进程
 sudo supervisorctl start demo
 
-28. 查找文件位置
-whereis 文件名
+30. 查找文件命令  
+
+#### 查找文件位置  
+whereis 文件名   或者是 find / -name 文件名
+
+#### 查找文件夹位置
+locate 文件夹名
+
+31. linux用户相关
+
+#### 用户相关
+
+```
+# 新建用户组
+groupadd groupname
+
+# 查看当前用户分组
+groups accountname
+
+# 新建用户
+useradd -g ubuntu -G sudo -d /home/accountname -m accountname
+
+-g: 用户所属用户分组
+-G: 所属其他分组
+-d: 指定用户目录
+-m: 配合-d使用，如果不存在-d目录则创建
+
+# 修改用户信息
+usermod -G plugindev accountname
+
+# 删除
+userdel accountname
+
+# 修改密码
+passwd accountname
+```
+#### vim常用快捷键
+
+```
+# 设置行号
+:set number
+
+# 复制时不格式化
+:set paste
+
+# 跳转导行尾部
+0
+
+# 跳转到行首
+$
+
+# 跳转到文件头
+gg
+
+# 跳转导文件尾
+shift + g
+
+# 跳转到下个词首
+w
+
+# 跳转到下个词尾
+b
+
+# 跳转到某行
+:直接写对应行号舒数字，例如
+:166
+
+# 搜索
+/关键字
+
+按n跳到下一行
+```

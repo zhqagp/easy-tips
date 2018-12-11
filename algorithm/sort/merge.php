@@ -252,7 +252,6 @@ function loopMerge($array){
 
   // 左边区域的右边界
   $leftMax = 0;
-
   // 右边区域的左边界
   $rightMin = 0;
 
